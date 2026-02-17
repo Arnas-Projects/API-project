@@ -1,0 +1,31 @@
+body {
+    background-color: #444;
+    color: white;
+}
+
+a {
+    color:seagreen;
+}
+
+a:active {
+    color:springgreen;
+}
+
+p.fetch-data {
+    display: flex;
+    /* width: 300px; */
+    margin: 15px 0;
+}
+
+p.fetch-data span {
+    margin-left: auto;
+    flex-basis: 88%;
+    text-align: left;
+}
+
+div.company-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    flex-basis: 88%;
+}

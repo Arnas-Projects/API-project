@@ -12,7 +12,7 @@ const init = () => {
         const postElement = document.createElement("li");
         const postLink = document.createElement("a");
         postLink.textContent = id + ". " + title;
-        postLink.href = `/post.html?post-id=${id}`;
+        postLink.href = `/API-PROJECT/post.html?post-id=${id}`;
         postElement.append(postLink);
         postsList.append(postElement);
       });

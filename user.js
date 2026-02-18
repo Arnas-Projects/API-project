@@ -1,21 +1,25 @@
-const init = (req, res) => {
+const init = async _ => {
     const urlSearch = location.search;
     const urlSearchParams = new URLSearchParams(urlSearch);
     const userId = urlSearchParams.get('user-id');
 
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-        .then((res) => res.json())
-        .then((data) => {
-            const pageContent = document.querySelector('#page-content');
+    const pageContent = document.querySelector('#content');
 
-            const userElement = userContent(data);
+    const userData = await fetchUser(userId);
+    const userElement = userContent(userData);
 
-            pageContent.append(userElement);
-        });
+    pageContent.append(userElement);
 };
 
+const fetchUser = async (id) => {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    const user = await res.json();
 
-const userContent = (param, addressParam) => {
+    return user;
+}
+
+
+const userContent = (param) => {
 
     const {
         id,
@@ -36,7 +40,7 @@ const userContent = (param, addressParam) => {
     userWrapper.classList.add('user-wrapper');
 
     const userTitle = document.createElement('h1');
-    userTitle.textContent = 'User name: ' + name;
+    userTitle.textContent = id + '. ' + 'User name: ' + name;
     userWrapper.append(userTitle);
 
     if (username) {
@@ -55,7 +59,7 @@ const userContent = (param, addressParam) => {
         const userEmail = document.createElement('p');
         userEmail.textContent = 'Email:';
         userEmail.classList.add('fetch-data');
-        
+
         const value = document.createElement('span');
         value.textContent = email;
         userEmail.append(value);

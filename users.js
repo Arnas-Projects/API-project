@@ -20,19 +20,13 @@ const usersListsComponent = (data) => {
     const usersListTitle = document.createElement('h2');
     usersListTitle.textContent = data.length > 0 ? 'Users:' : 'No Users';
     usersListWrapper.append(usersListTitle);
-};
 
-
-fetch('https://jsonplaceholder.typicode.com/users')
-    .then((res) => res.json())
-    .then((users) => {
-        const content = document.querySelector('#content');
+    if (data.length > 0) {
         const usersList = document.createElement('ul');
-        content.append(usersList);
+        usersListWrapper.append(usersList);
 
-        users.forEach((user) => {
+        data.forEach((user) => {
             const { name, id } = user;
-
             const userElement = document.createElement('li');
             const userLink = document.createElement('a');
             userLink.textContent = id + '. ' + name;
@@ -41,7 +35,9 @@ fetch('https://jsonplaceholder.typicode.com/users')
             usersList.append(userElement);
         });
     }
-)
+
+    return usersListWrapper;
+}
 
 
 init();

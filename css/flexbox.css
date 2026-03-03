@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #444;
+}
+
+.green {
+   background-color: green; 
+}
+
+.red {
+   background-color: crimson; 
+}
+
+.blue {
+   background-color: royalblue; 
+}
+
+.item {
+    height: 100px;
+    width: 100px;
+}
+
+.container {
+    background-color: #eee;
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+}
+

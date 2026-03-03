@@ -26,7 +26,7 @@ body {
 }
 
 .container {
-    background-color: #eee;
+    background-color: #cdcdcd;
     height: 500px;
     width: 500px;
     display: flex;
@@ -36,3 +36,16 @@ body {
     gap: 20px;
 }
 
+.flex-container {
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.section {
+    background-color: #cdcdcd;
+    padding: 20px;
+    width: calc((100% - 20px) / 2);
+    margin-bottom: 20px;
+}

@@ -41,6 +41,7 @@ div.container-10 {
 
     .inner-container1 {
         .box1 {
+            flex-wrap: wrap;
             width: 100%;
             height: calc(100% / 3);
             background-color: yellow;
@@ -61,6 +62,7 @@ div.container-10 {
         }
 
         .box2 {
+            flex-wrap: wrap;
             width: 100%;
             height: calc(100% / 3);
             background-color: #260c86;
@@ -69,6 +71,7 @@ div.container-10 {
 
     .inner-container3 {
         .box1 {
+            flex-wrap: wrap;
             width: 100%;
             height: calc(100% / 3);
             background-color: #a67217;
@@ -79,6 +82,27 @@ div.container-10 {
             height: calc(100% / 3 * 2);
             background-color: #29b843;
         }
+    }
+
+    .special {
+        width: calc(100% / 2);
+        height: calc(100% / 2);
+    }
+
+    .specialColor1 {
+        background-color: #109fb8;
+    }
+
+    .specialColor2 {
+        background-color: #0a6d15;
+    }
+
+    .specialColor3 {
+        background-color: crimson;
+    }
+
+    .specialColor4 {
+        background-color: #3316d6;
     }
 }
 

@@ -12,6 +12,226 @@ body {
     display: flex;
 }
 
+// 3 V2 Layout ----------------------------------------
+
+div.container3-v2 {
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    margin-bottom: 75px;
+    border-radius: 25px;
+    overflow: hidden;
+
+    .row1 {
+        width: 100%;
+        height: calc(100% / 3);
+        background-color: royalblue;
+
+        .box1 {
+            width: calc(100% / 3);
+            height: 100%;
+            background-color: yellow;
+        }
+
+        .box2 {
+            width: calc(100% / 3 * 2);
+            height: 100%;
+            background-color: orange;
+        }
+    }
+    
+    .row2 {
+        width: 100%;
+        height: calc(100% / 3);
+        background-color: green;
+
+        .box1,
+        .box2 {
+            width: calc(100% / 3);
+            height: 100%;
+        }
+        .box1 {
+            background-color: #17a7ba;
+        }
+
+        .box2 {
+            flex-wrap: wrap;
+            background-color: #881515;
+
+            .item {
+                width: calc(100% / 2);
+                height: calc(100% / 2);
+            }
+
+            .color1 {
+                background-color: #1616b1;
+            }
+
+            .color2 {
+                background-color: #118235;
+            }
+
+            .color3 {
+                background-color: #9b1313;
+            }
+
+            .color4 {
+                background-color: #cedb1f;
+            }
+        }
+    }
+
+    .row3 {
+        width: 100%;
+        height: calc(100% / 3);
+        background-color: crimson;
+
+        .box1 {
+            width: calc(100% / 3 * 2);
+            height: 100%;
+            background-color: #10b840;
+        }
+
+        .box2 {
+            width: calc(100% / 3);
+            height: 100%;
+            background-color: #110f83;
+        }
+    }
+}
+
+
+
+// 2 V2 Layout ----------------------------------------
+
+div.container2-v2 {
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    margin-bottom: 75px;
+
+    .row1 {
+        width: 100%;
+        height: calc(100% / 4);
+        background-color: royalblue;
+
+        .box1 {
+            width: calc(100% / 5 * 2);
+            height: 100%;
+            background-color: yellow;
+        }
+
+        .box2 {
+            width: calc(100% / 5);
+            height: 100%;
+            background-color: #109fb8;
+        }
+    }
+
+    .row2 {
+        width: 100%;
+        height: calc(100% / 4 * 2);
+        background-color: crimson;
+
+        .box1 {
+            flex-direction: column;
+            width: calc(100% / 4);
+            height: 100%;
+            background-color: green;
+
+            .item {
+                width: 100%;
+                height: calc(100% / 2);
+            }
+
+            .color1 {
+                background-color: crimson;
+            }
+
+            .color2 {
+                background-color: #2cb115;
+            }
+        }
+
+        .box2 {
+            width: calc(100% / 4 * 2);
+            height: 100%;
+            background-color: #3009ae;
+        }
+    }
+}
+
+
+
+
+
+// 1 V2 Layout ----------------------------------------
+
+div.container1-v2 {
+    width: 500px;
+    height: 500px;
+    background-color: lightgray;
+    margin-bottom: 75px;
+
+    .inner-container1 {
+        width: calc(100% / 3 * 2);
+        height: 100%;
+        background-color: crimson;
+
+        .box1 {
+            width: 100%;
+            height: calc(100% / 3 * 2);
+            background-color: green;
+        }
+
+        .box2 {
+            width: 100%;
+            height: calc(100% / 3);
+            background-color: yellow;
+
+            .item {
+                width: calc(100% / 2);
+                height: 100%;
+            }
+
+            .color1 {
+                background-color: royalblue;
+            }
+
+            .color2 {
+                background-color: rosybrown;
+            }
+        }
+    }
+
+    .inner-container2 {
+        width: calc(100% / 3);
+        height: 100%;
+        background-color: royalblue;
+
+        .box {
+            width: 100%;
+            height: calc(100% / 3);
+        }
+
+        .color1 {
+            background-color: gold;
+        }
+
+        .color2 {
+            background-color: orange;
+        }
+
+        .color3 {
+            background-color: blue;
+        }
+    }
+}
+
+
+
+
 // 10 Layout ----------------------------------------
 
 div.container-10 {
@@ -105,11 +325,6 @@ div.container-10 {
         background-color: #3316d6;
     }
 }
-
-
-
-
-
 
 
 // 9 Layout ----------------------------------------

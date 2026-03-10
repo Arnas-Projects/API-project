@@ -1,0 +1,1 @@
+*,*::before,*::after{box-sizing:border-box}body{background-color:#444}.grid{display:grid}div.container1{background-color:#d3d3d3;grid-template-columns:2fr 1fr;grid-template-rows:1fr 2fr}

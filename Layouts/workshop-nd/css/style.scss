@@ -1,7 +1,8 @@
 $main-width: 1350px;
 $content-container-margin: 25px;
-$content-gap: 2.5em;
+$content-gap: 35px;
 $round-border-setting: 10px;
+$shadow-setting: 19px 50px 50px 13px #00000052;
 
 .red {
     background-color: crimson;
@@ -24,7 +25,7 @@ $round-border-setting: 10px;
 }
 
 .purple {
-    background-color: #4d0989;
+    background-color: #621bad;
 }
 
 .skyblue {
@@ -45,7 +46,7 @@ $round-border-setting: 10px;
 }
 
 body {
-    background-color: #444;
+    // background-color: #444;
     color: white;
 }
 
@@ -53,14 +54,15 @@ section.main {
     display: flex;
     justify-content: center;
     // align-items: center;
-    height: 100vh;
+    // height: 100vh;
     margin: 50px 25px;
 
     div.container {
         display: flex;
         width: 100%;
         max-width: $main-width;
-        height: 100%;
+        align-items: flex-start; // !!! SVARBU !!! Šita eilutė ištempia konteinerius tik tiek, kad tilpų turinys
+        // height: 100%;
         // max-height: 700px;
         // background-color: lightgray;
         padding: 35px;
@@ -70,21 +72,34 @@ section.main {
             display: flex;
             flex-direction: column;
             width: calc(100% / 4 * 3);
-            height: 100%;
+            // height: 100%;
             gap: $content-gap;
 
             div.row-1,
             div.row-2 {
                 display: flex;
                 width: 100%;
-                height: calc(100% / 2);
+                // height: calc(100% / 2);
                 gap: $content-gap;
+                z-index: 0;
             }
 
             div.row-1 {
+
                 div.content-container-1 {
+                    position: relative;
                     width: calc(100% / 3 * 2);
-                    height: 100%;
+                    // height: 100%;
+                    box-shadow: $shadow-setting;
+                    z-index: 1;
+
+                    img.special {
+                        position: absolute;
+                        top: 0px;
+                        right: 70px;
+                        width: 100px;
+                        z-index: -1;
+                    }
 
                     img {
                         border-color: #a947c2;
@@ -93,20 +108,23 @@ section.main {
 
                 div.content-container-2 {
                     width: calc(100% / 3);
-                    height: 100%;
+                    // height: 100%;
+                    box-shadow: $shadow-setting;
                 }
             }
 
             div.row-2 {
                 div.content-container-1 {
                     width: calc(100% / 3);
-                    height: 100%;
+                    // height: 100%;
                     color: #444;
+                    box-shadow: $shadow-setting;
                 }
 
                 div.content-container-2 {
                     width: calc(100% / 3 * 2);
-                    height: 100%;
+                    // height: 100%;
+                    box-shadow: $shadow-setting;
 
                     img {
                         border-color: #981ac2;
@@ -117,7 +135,8 @@ section.main {
 
         div.inner-container-2 {
             width: calc(100% / 4);
-            height: 100%;
+            // height: 100%;
+            box-shadow: $shadow-setting;
 
             * {
                 color: #444;
@@ -139,10 +158,12 @@ section.main {
 
             div.user-container {
                 display: flex;
+                align-items: center;
                 gap: 17px;
 
                 img {
-                    width: 3.2em;
+                    width: 40px;
+                    min-width: 40px;
                     overflow: hidden;
                     border-radius: 50%;
                     border: 2px solid gray;

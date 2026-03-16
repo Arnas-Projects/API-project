@@ -1,21 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Workshop 03.13 - Grid</title>
+<meta charset="UTF-8">
+<title>Grid Skeleton</title>
+
+<style>
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  padding:40px;
+  background:#f5f5f5;
+  font-family:sans-serif;
+}
+
+/* MAIN GRID */
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: 140px;
+  gap:20px;
+}
+
+/* SKELETON CARD */
+
+.card{
+  background:#e5e5e5;
+  border-radius:16px;
+}
+
+/* GRID AREAS */
+
+.card-a{
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.card-b{
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+.card-c{
+  grid-column: span 3;
+  grid-row: span 3;
+}
+
+.card-d{
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.card-e{
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.card-f{
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.card-g{
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.card-h{
+  grid-column: span 3;
+  grid-row: span 1;
+}
+
+.card-i{
+  grid-column: span 6;
+  grid-row: span 1;
+}
+
+</style>
 </head>
 
-<!-- Task URL: https://github.com/frontendmentorio/bento-grid/tree/main -->
-
 <body>
-    
-    <section class="container">
-        <div class="box-wrapper">
-            
-        </div>
-    </section>
+
+<div class="grid">
+
+  <div class="card card-a"></div>
+  <div class="card card-b"></div>
+  <div class="card card-c"></div>
+
+  <div class="card card-d"></div>
+  <div class="card card-e"></div>
+  <div class="card card-f"></div>
+
+  <div class="card card-g"></div>
+  <div class="card card-h"></div>
+  <div class="card card-i"></div>
+
+</div>
 
 </body>
 </html>
